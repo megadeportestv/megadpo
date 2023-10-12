@@ -17,7 +17,7 @@
 <body>
 <div id="player"></div>
 <script type="text/javascript">
-  $.getJSON('https://tcnt.golf/json/capturado.json', function(data) {
+  $.getJSON('https://tcnt.golf/json/capturado.json?', function(data) {
     var mpd = data.mpd;
     var playerInstance=jwplayer("player");
     playerInstance.setup({

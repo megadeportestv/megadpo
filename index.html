@@ -1,3 +1,23 @@
+<!DOCTYPE html>
 <html>
-Hello world!
+<head>
+    <title>Información del Visitante</title>
+</head>
+<body>
+    <h1>Información del Visitante</h1>
+    <p>IP del visitante: <span id="ip"></span></p>
+    <p>Ubicación del visitante: <span id="location"></span></p>
+
+    <script>
+        // Utiliza la API de ipinfo.io para obtener información del visitante
+        fetch('https://ipinfo.io')
+            .then(response => response.json())
+            .then(data => {
+                // Actualiza los elementos HTML con la información del visitante
+                document.getElementById('ip').textContent = data.ip;
+                document.getElementById('location').textContent = data.city + ', ' + data.region;
+            })
+            .catch(error => console.error(error));
+    </script>
+</body>
 </html>

@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tu Página de Inicio</title>
-    <script type="text/javascript">
-        // Función para abrir el popup de publicidad
-        function abrirPopup() {
-            var anuncio = window.open('//www.profitablecreativeformat.com/4505fd5a46eabd53ebae5e5858c164d5/invoke.js', 'AnuncioPopup', 'width=160, height=300');
-        }
-
-        window.addEventListener('DOMContentLoaded', abrirPopup);
-    </script>
+    <meta charset="UTF-8">
+    <title>Tu Tienda de Tecnología</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>Bienvenido a mi sitio web</h1>
-    <!-- Contenido de tu página de inicio -->
+    <header>
+        <h1>Tu Tienda de Tecnología</h1>
+        <p>Dirección: 17 De Noviembre, Independencia, Lima, Código Postal LIMA 28</p>
+        <p>Teléfono: (01) 7824531</p>
+    </header>
+
+    <main>
+        <section class="product-card">
+            <img src="imagen-producto-1.jpg" alt="Producto 1">
+            <h2>Producto 1</h2>
+            <p>Especificaciones: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Precio: S/ 500.00</p>
+            <button>Comprar</button>
+        </section>
+
+        <section class="product-card">
+            <img src="imagen-producto-2.jpg" alt="Producto 2">
+            <h2>Producto 2</h2>
+            <p>Especificaciones: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Precio: S/ 800.00</p>
+            <button>Comprar</button>
+        </section>
+
+        <!-- Agrega más tarjetas de productos según tus necesidades -->
+    </main>
+
+    <footer>
+        <p>Dirección: 17 De Noviembre, Independencia, Lima, Código Postal LIMA 28</p>
+        <p>Teléfono: (01) 7824531</p>
+    </footer>
 </body>
 </html>

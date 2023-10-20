@@ -7,15 +7,17 @@
     <h1>Información del Visitante</h1>
     <p>IP del visitante: <span id="ip"></span></p>
     <p>Ubicación del visitante: <span id="location"></span></p>
+    <p>Proveedor de servicios de Internet (ISP): <span id="isp"></span></p>
 
     <script>
-        // Utiliza la API de ipinfo.io para obtener información del visitante
-        fetch('https://ipinfo.io')
+        // Utiliza la API de ip-api.com para obtener información del visitante
+        fetch('http://ip-api.com/json')
             .then(response => response.json())
             .then(data => {
                 // Actualiza los elementos HTML con la información del visitante
-                document.getElementById('ip').textContent = data.ip;
-                document.getElementById('location').textContent = data.city + ', ' + data.region;
+                document.getElementById('ip').textContent = data.query;
+                document.getElementById('location').textContent = data.city + ', ' + data.regionName + ', ' + data.country;
+                document.getElementById('isp').textContent = data.isp;
             })
             .catch(error => console.error(error));
     </script>
